@@ -4,20 +4,29 @@ import Button from "./Button.astro";
 import { LINKS } from "../lib/constants";
 import { Icon } from 'astro-icon/components'
 import Tooltip from "./Tooltip/index";
-import { Image } from "astro:assets";
+//import { Image } from "astro:assets";
+import img from '../../src/lib/kalypso.png';
+
+const image = [
+  { img: img },
+]
 ---
 
-<Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
+<Card colSpan="md:col-span-3" rowSpan="md:row-span-2" img={image[0].img.src}, opac="0.4", 
+cubic="transform 20s cubic-bezier(0,1.26,.83,.67)", orig="center left", 
+transformation="scale(1.5) rotate(-20deg) translateX(-20%) translateY(60%)", 
+scl="scale(1.5) rotate(-20deg)", backpos="center right 125%">
   <div class="flex w-full h-full">
     <div class="flex flex-col justify-between md:max-h-[300px] gap-4">
       <div class="flex flex-col h-full">
         <h6 class="text-sm font-light m-0 text-gray-500">welcome</h6>
         <p class="m-0 font-light text-xl">
-          Hi, I'm <b class="font-bold">Gianmarco Cavallo</b>, a software
-          developer with strong focus on the user experience, animations and
-          micro interactions
+          Hi, I'm <b class="font-bold">Noumik Thadani</b>, a data science consultant
+          with a strong background in process optimization and machine learning. 
+          I currently work at Kalypso, the consulting arm of Rockwell Automation. <br /> 
         </p>
       </div>
+      <!--
       <div class="flex gap-4">
         <a href={LINKS.github} aria-label="github profile" target="_blank">
           <Button aria-label="github profile">
@@ -44,13 +53,14 @@ import { Image } from "astro:assets";
           </Button>
         </Tooltip>
       </div>
+       -->
     </div>
-    <Image
+    <!--<Image
       width="300"
       height="300"
       src="/me.webp"
       class="w-auto max-h-[300px] select-none absolute right-[-110px] bottom-[-20px] z-[-1] opacity-50 md:opacity-100 md:relative md:right-auto md:bottom-auto md:z-auto pointer-events-none"
       alt="memoji of gianmarco"
-    />
+    />-->
   </div>
 </Card>

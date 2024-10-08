@@ -1,0 +1,19 @@
+---
+import ProjectCard from "../ProjectCard/index.astro";
+import img from '../../lib/austinfc.webp';
+
+const image = [
+  { img: img },
+]
+---
+
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0].img.src} backpos="bottom" opac="0.7" skillicon1="../../src/lib/icons/Python-Light.svg" skillicon2="../../src/lib/icons/SQL.png" skillicon3="../../src/lib/icons/HTML.svg" skillicon4="../../src/lib/icons/CSS.svg" skillicon5="../../src/lib/icons/VBA.webp" skillicon6="../../src/lib/icons/JavaScript.svg" desc='"Built a data pipeline, creating a database & frontend app to gather player & match stats in real time"'>
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold m-0 z-20">Austin FC</h2>
+      <h2>Data Visualization & Analytics</h2>
+      <a href="https://sive.rs/nowff" target="_blank">
+      </a>
+    </div>
+  </div>
+</ProjectCard>

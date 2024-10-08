@@ -1,0 +1,14 @@
+---
+import Card from "./Card/index.astro";
+import img from '../../src/lib/white.png';
+
+const image = [
+  { img: img },
+]
+
+---
+
+<Card colSpan="md:col-span-2" rowSpan="md:row-span-1" title="Recent Projects", img={image[0].img.src}, opac="0.3", 
+cubic="transform 5s cubic-bezier(.01,.88,.61,.82)", orig="top right", 
+transformation="scale(1.25) translateY(-20%) translateX(20%)", scl="scale(2)", backpos="center">
+</Card>

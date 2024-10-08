@@ -1,0 +1,19 @@
+---
+import ProjectCard from "../ProjectCard/index.astro";
+import img from '../../lib/zimmer.webp';
+
+const image = [
+  { img: img },
+]
+---
+
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0].img.src} backpos="center" opac="0.7" skillicon1="../../src/lib/icons/Windchill.jpg" skillicon2="../../src/lib/icons/SQL.png" skillicon3="" skillicon4="" desc='"Designed, developed, & led trainings for a Windchill PLM solution."'>
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold m-0 z-20">Zimmer Biomet</h2>
+      <h2>Product Lifecycle Management</h2>
+      <a href="https://sive.rs/nowff" target="_blank">
+      </a>
+    </div>
+  </div>
+</ProjectCard>

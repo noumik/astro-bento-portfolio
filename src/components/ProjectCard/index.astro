@@ -1,0 +1,199 @@
+---
+import { Icon } from "astro-icon/components";
+import Content from "./Content.astro";
+
+interface Props {
+  title?: string;
+  body?: string;
+  colSpan?: string;
+  rowSpan?: string;
+  href?: string;
+  colorText?: string;
+  height?: string;
+  width?: string;
+  img?: string;
+  opac?: string;
+  cubic?: string;
+  orig?: string;
+  transformation?: string;
+  scl?: string;
+  backpos?: string;
+  skillicon1?: string;
+  skillicon2?: string;
+  skillicon3?: string;
+  skillicon4?: string;
+  skillicon5?: string;
+  skillicon6?: string;
+  desc?: string;
+}
+
+const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic, orig, transformation, scl, backpos, skillicon1, skillicon2, skillicon3, skillicon4, skillicon5, skillicon6, desc } = Astro.props;
+---
+
+<style define:vars={{ image: `url("${img}")`, opac: opac, cubic: cubic, orig: orig, transformation: transformation, scl: scl, backpos: backpos, skillicon1: `url("${skillicon1}")`, skillicon2:`url("${skillicon2}")`, skillicon3:`url("${skillicon3}")`, skillicon4:`url("${skillicon4}")`, skillicon5:`url("${skillicon5}")`, skillicon6:`url("${skillicon6}")`, desc:desc }}>
+
+  .card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::after {
+    content: '';
+    background-image: var(--image);
+    background-size: cover;
+    background-position: var(--backpos);
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:50%;
+    opacity: var(--opac);
+
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: -100%; /* Start hidden below the div */
+    left: 0;
+    right: 0;
+    height: 50%; /* The height of the overlay */
+    background-color: rgba(0, 0, 0, 1); /* Black background with transparency */
+    transition: bottom 0.5s ease; /* Smooth transition */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  .overlay::before {
+    content: var(--desc);
+  }
+
+  .card:hover .overlay {
+    bottom: 0;
+  }
+
+  .card:hover::after {
+    opacity: 0.3;
+  }
+
+  .card:hover .skillicon1 {
+    opacity: 0; /* Fade out */
+  }
+  .card:hover .skillicon2 {
+    opacity: 0; /* Fade out */
+  }
+  .card:hover .skillicon3 {
+    opacity: 0; /* Fade out */
+  }
+  .card:hover .skillicon4 {
+    opacity: 0; /* Fade out */
+  }
+  .card:hover .skillicon5 {
+    opacity: 0; /* Fade out */
+  }
+  .card:hover .skillicon6 {
+    opacity: 0; /* Fade out */
+  }
+
+  .skillicon1 {
+    content: var(--skillicon1);
+    z-index:10;
+    position:absolute;
+    height:20%;
+    bottom: 25%;
+    left: 5%;
+    opacity: 1;
+    transition: opacity 0.2s ease; /* Transition for opacity */
+  }
+
+  .skillicon2 {
+    content: var(--skillicon2);
+    z-index:10;
+    position:absolute;
+    height:20%;
+    bottom: 25%;
+    left: 20%;
+    opacity: 1;
+    transition: opacity 0.2s ease; /* Transition for opacity */
+  }
+
+  .skillicon3 {
+    content: var(--skillicon3);
+    z-index:10;
+    position:absolute;
+    height:20%;
+    bottom: 2%;
+    left: 5%;
+    opacity: 1;
+    transition: opacity 0.2s ease; /* Transition for opacity */
+  }
+
+  .skillicon4 {
+    content: var(--skillicon4);
+    z-index:10;
+    position:absolute;
+    height:20%;
+    bottom: 2%;
+    left: 20%;
+    opacity: 1;
+    transition: opacity 0.2s ease; /* Transition for opacity */
+  }
+
+  .skillicon5 {
+    content: var(--skillicon5);
+    z-index:10;
+    position:absolute;
+    height:20%;
+    bottom: 25%;
+    left: 35%;
+    opacity: 1;
+    transition: opacity 0.2s ease; /* Transition for opacity */
+  }
+
+  .skillicon6 {
+    content: var(--skillicon6);
+    z-index:10;
+    position:absolute;
+    height:20%;
+    bottom: 2%;
+    left: 35%;
+    opacity: 1;
+    transition: opacity 0.2s ease; /* Transition for opacity */
+  }
+</style>
+
+<div
+  class={`card h-max sm:h-auto group overflow-hidden transform-y-[-40%] bg-darkslate-500 shadow-lg rounded-lg p-6 border border-white hover:border-primary-500 align-start flex-none ${
+    height || "h-full"
+  } justify-start relative transform perspective-1200 w-full transition duration-75 ease-in-out col-span-1 ${
+    colSpan || "md:col-span-2"
+  } ${rowSpan || ""}`}
+>
+
+<img class="skillicon1">
+<img class="skillicon2">
+<img class="skillicon3">
+<img class="skillicon4">
+<img class="skillicon5">
+<img class="skillicon6">
+
+<div class="overlay text-base font-semibold text-center"></div>
+  {
+    href ? (
+      <a href={href} target="_blank" class={`h-full w-full ${colorText || " "}`}>
+        <Icon
+          name="ri:arrow-right-up-line"
+          class="h-6 float-right group-hover:text-primary-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ease-in-out duration-100 z-20"
+        />
+        <Content title={title} body={body}>
+          <slot />
+        </Content>
+      </a>
+    ) : (
+      <Content title={title} body={body}>
+        <slot />
+      </Content>
+    )
+  }
+</div>

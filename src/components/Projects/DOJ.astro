@@ -1,0 +1,19 @@
+---
+import ProjectCard from "../ProjectCard/index.astro";
+import img from '../../lib/doj.jpg';
+
+const image = [
+  { img: img },
+]
+---
+
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0].img.src} backpos="top" opac="0.7" skillicon1="../../src/lib/icons/Python-Light.svg" skillicon2="../../src/lib/icons/R-Dark.svg" skillicon3="../../src/lib/icons/SQL.png" skillicon4="" desc='"Analyzed complex data sources to identify fraud in federal consumer protection cases"'>
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold m-0 z-20">Department of Justice</h2>
+      <h2>Forensic Data Analysis</h2>
+      <a href="https://sive.rs/nowff" target="_blank">
+      </a>
+    </div>
+  </div>
+</ProjectCard>

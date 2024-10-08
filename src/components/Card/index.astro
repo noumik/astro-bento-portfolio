@@ -11,10 +11,55 @@ interface Props {
   colorText?: string;
   height?: string;
   width?: string;
+  img?: string;
+  opac?: string;
+  cubic?: string;
+  orig?: string;
+  transformation?: string;
+  scl?: string;
+  backpos?: string;
 }
 
-const { title, body, colSpan, rowSpan, href, colorText, height } = Astro.props;
+const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic, orig, transformation, scl, backpos } = Astro.props;
 ---
+
+<style define:vars={{ image: `url("${img}")`, opac: opac, cubic: cubic, orig: orig, transformation: transformation, scl: scl, backpos: backpos }}>
+
+  .card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--image);
+    background-size: cover;
+    background-position: var(--backpos);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, var(--cubic);
+    z-index: -1;
+    
+    transform: var(--scl);
+    transform-origin: var(--orig);
+  }
+
+  .card:hover::before {
+    opacity: var(--opac);
+    transform: var(--transformation);
+    /*transform: var(--scl) translateX(-30%) translateY(0%);*/
+    /*background-position: var(--backpos);*/
+  }
+
+  .card > div {
+    position: relative;
+    z-index: 1;
+  }
+</style>
 
 <div
   class={`card h-max sm:h-auto group overflow-hidden transform-y-[-40%] bg-darkslate-500 shadow-lg rounded-lg p-6 border border-darkslate-100 hover:border-primary-500 align-start flex-none ${
@@ -25,7 +70,7 @@ const { title, body, colSpan, rowSpan, href, colorText, height } = Astro.props;
 >
   {
     href ? (
-      <a href={href} class={`h-full w-full ${colorText || " "}`}>
+      <a href={href} target="_blank" class={`h-full w-full ${colorText || " "}`}>
         <Icon
           name="ri:arrow-right-up-line"
           class="h-6 float-right group-hover:text-primary-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ease-in-out duration-100 z-20"

@@ -1,0 +1,59 @@
+---
+import Card from "./Card/index.astro";
+
+---
+<!--
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-3" title="Skills">
+  <div class="flex flex-col gap-2">
+    Languages:
+    <p class="text-sm">Python, R, SQL (MySQL, Postgres, SQLite), VBA, HTML, CSS, JavaScript, C#, PHP</p>
+    Tools & Methods:
+    <p class="text-sm">QGIS, Tableau, SAS Visual Analytics, Git, Azure, Regression Analysis, Classification, Clustering, Feature Engineering, Optimization</p>
+</Card>
+-->
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  th, td {
+    border: hidden;
+    text-align: center;
+    padding: 0px;
+    word-wrap: break-word;
+    width: 25%;
+  }
+</style>
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-3" title="Skills">
+  <p class="text-xs">&nbsp;</p>
+  <div class="flex flex-col gap-2">
+    <table>
+      <tbody>
+        <tr>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/Python-Light.svg" height="100%" width="100%" alt="Python">Python</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/R-Dark.svg" height="100%" width="100%" alt="R">R</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/SQL.png" height="100%" width="100%" alt="SQL">SQL</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/Java-Light.svg" height="100%" width="100%" alt="Java">Java</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/VBA.webp" height="100%" width="100%" alt="VBA">VBA</td>
+        </tr>
+        <tr>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/HTML.svg" height="100%" width="100%" alt="HTML">HTML</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/CSS.svg" height="100%" width="100%" alt="CSS">CSS</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/JavaScript.svg" height="100%" width="100%" alt="JavaScript">JS</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/C-Sharp.png" height="100%" width="100%" alt="C#">C#</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/PHP-Light.svg" height="100%" width="100%" alt="PHP">PHP</td>
+        </tr>
+        <tr>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/QGIS.png" height="100%" width="100%" alt="QGIS">QGIS</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/Tableau.svg" height="100%" width="100%" alt="Tableau">Tableau</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/SAS.webp" height="100%" width="100%" alt="SAS">SAS</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/Git.png" height="100%" width="100%" alt="Git">Git</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/Azure.png" height="100%" width="100%" alt="Azure">Azure</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Card>

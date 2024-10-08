@@ -1,0 +1,38 @@
+---
+import Card from "./Card/index.astro";
+import img from '../../src/lib/school.png';
+import gatech from '../../src/lib/GTOneLine_RGB.png';
+import mccombs from '../../src/lib/McCombs.png';
+
+const image = [
+  { img: img },
+  { gatech: gatech },
+  { mccombs: mccombs },
+]
+
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-3" title="Education" img={image[0]?.img?.src}, opac="0.1", 
+cubic="transform 20s cubic-bezier(0,1.95,.6,.96)", orig="center left", 
+transformation="scale(1.5) rotate(-30deg) translateX(-30%) translateY(10%)", 
+scl="scale(1.5) rotate(-30deg)", backpos="center right 125%">
+  <div class="flex flex-col gap-2">
+    <div class="text-sm font-light">
+      <p>
+        <br /><br />
+        <img src={image[1]?.gatech?.src} style="width:96px; height:24px; margin: -20px -20px -20px -20px; display: block; margin-left: auto; margin-right: auto; width: 60%; height: 60%">
+        <br />
+        Georgia Institute of Technology<br />
+        M.S., Data Science<br />
+        July 2025 (e)
+        <br /><br /><br />
+        <img src={image[2]?.mccombs?.src} style="width:96px; height:24px; margin: -20px -20px -20px -20px; display: block; margin-left: auto; margin-right: auto; width: 70%; height: 70%">
+        <br />
+        The University of Texas at Austin<br />
+        B.B.A.,
+        Management Info. Systems<br />
+        May 2020
+        <br />
+      </p>
+  </div>
+</Card>

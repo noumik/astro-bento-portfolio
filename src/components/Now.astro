@@ -1,17 +1,24 @@
 ---
-import Card from "./Card/index.astro";
+import ProjectCard from "./ProjectCard/index.astro";
 import Pulse from "./Pulse.astro";
+import img from '../../src/lib/bbu.png';
+
+const image = [
+  { img: img },
+]
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0].img.src}, opac="0.7" backpos="center" skillicon1="../../src/lib/icons/oraclewms.png" skillicon2="../../src/lib/icons/Python-Light.svg" skillicon3="" skillicon4="" desc='"Implementing & leading training on Oracle WMS. Developing a resource optimization program."'>
+
   <div class="flex justify-between w-full items-start mb-2">
     <div class="flex flex-col">
-      <h2>Now</h2>
+      <h2 class="text-xl font-bold m-0 z-20">Current Project</h2>
+      <h2>Bimbo Bakeries Oracle WMS</h2>
       <a href="https://sive.rs/nowff" target="_blank">
-        <span class="text-xs text-gray-500 cursor-pointer">what's that ?</span>
+        <!--<span class="text-xs text-gray-500 cursor-pointer">what's that ?</span> -->
       </a>
     </div>
     <Pulse />
   </div>
-  <p class="text-xs">Currently working as freelancer</p>
-</Card>
+  <p class="text-xs"></p>
+</ProjectCard>
