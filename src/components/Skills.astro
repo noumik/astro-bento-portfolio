@@ -1,6 +1,39 @@
 ---
 import Card from "./Card/index.astro";
 
+import python from '../../src/lib/icons/Python-Light.svg';
+import rlang from '../../src/lib/icons/R-Dark.svg';
+import sql from '../../src/lib/icons/SQL.png';
+import java from '../../src/lib/icons/Java-Light.svg';
+import vba from '../../src/lib/icons/VBA.webp';
+import html from '../../src/lib/icons/HTML.svg';
+import css from '../../src/lib/icons/CSS.svg';
+import js from '../../src/lib/icons/JavaScript.svg';
+import csharp from '../../src/lib/icons/C-Sharp.png';
+import php from '../../src/lib/icons/PHP-Light.svg';
+import qgis from '../../src/lib/icons/QGIS.png';
+import tableau from '../../src/lib/icons/Tableau.svg';
+import sas from '../../src/lib/icons/SAS.webp';
+import git from '../../src/lib/icons/Git.png';
+import azure from '../../src/lib/icons/Azure.png';
+
+const image = [
+  { python: python },
+  { rlang: rlang },
+  { sql: sql },
+  { java: java },
+  { vba: vba },
+  { html: html },
+  { css: css },
+  { js: js },
+  { csharp: csharp },
+  { php: php },
+  { qgis: qgis },
+  { tableau: tableau },
+  { sas: sas },
+  { git: git },
+  { azure: azure },
+]
 ---
 <!--
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-3" title="Skills">
@@ -33,25 +66,25 @@ import Card from "./Card/index.astro";
     <table>
       <tbody>
         <tr>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/Python-Light.svg" height="100%" width="100%" alt="Python">Python</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/R-Dark.svg" height="100%" width="100%" alt="R">R</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/SQL.png" height="100%" width="100%" alt="SQL">SQL</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/Java-Light.svg" height="100%" width="100%" alt="Java">Java</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/VBA.webp" height="100%" width="100%" alt="VBA">VBA</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[0]?.python?.src} height="100%" width="100%" alt="Python">Python</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[1]?.rlang?.src} height="100%" width="100%" alt="R">R</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[2]?.sql?.src} height="100%" width="100%" alt="SQL">SQL</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[3]?.java?.src} height="100%" width="100%" alt="Java">Java</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[4]?.vba?.src} height="100%" width="100%" alt="VBA">VBA</td>
         </tr>
         <tr>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/HTML.svg" height="100%" width="100%" alt="HTML">HTML</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/CSS.svg" height="100%" width="100%" alt="CSS">CSS</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/JavaScript.svg" height="100%" width="100%" alt="JavaScript">JS</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/C-Sharp.png" height="100%" width="100%" alt="C#">C#</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/PHP-Light.svg" height="100%" width="100%" alt="PHP">PHP</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[5]?.html?.src} height="100%" width="100%" alt="HTML">HTML</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[6]?.css?.src} height="100%" width="100%" alt="CSS">CSS</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[7]?.js?.src} height="100%" width="100%" alt="JavaScript">JS</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[8]?.csharp?.src} height="100%" width="100%" alt="C#">C#</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[9]?.php?.src} height="100%" width="100%" alt="PHP">PHP</td>
         </tr>
         <tr>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/QGIS.png" height="100%" width="100%" alt="QGIS">QGIS</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/Tableau.svg" height="100%" width="100%" alt="Tableau">Tableau</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/SAS.webp" height="100%" width="100%" alt="SAS">SAS</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/Git.png" height="100%" width="100%" alt="Git">Git</td>
-          <td class="text-xs font-light text-center hover:bg-blue-950"><img src="../../src/lib/icons/Azure.png" height="100%" width="100%" alt="Azure">Azure</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[10]?.qgis?.src} height="100%" width="100%" alt="QGIS">QGIS</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[11]?.tableau?.src} height="100%" width="100%" alt="Tableau">Tableau</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[12]?.sas?.src} height="100%" width="100%" alt="SAS">SAS</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[13]?.git?.src} height="100%" width="100%" alt="Git">Git</td>
+          <td class="text-xs font-light text-center hover:bg-blue-950"><img src={image[14]?.azure?.src} height="100%" width="100%" alt="Azure">Azure</td>
         </tr>
       </tbody>
     </table>
