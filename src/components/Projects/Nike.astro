@@ -1,16 +1,16 @@
 ---
 import ProjectCard from "../ProjectCard/index.astro";
-import img from '../../lib/michelin.webp';
+import img from '../../lib/nike.jpg';
 
 const image = [
   { img: img },
 ]
 ---
 
-<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0].img.src} backpos="center" opac="0.7">
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0].img.src} backpos="center" opac="0.7" skillicon1="" skillicon2="" desc='"Description"'>
   <div class="flex justify-between w-full items-start mb-2">
     <div class="flex flex-col">
-      <h2 class="text-xl font-bold m-0 z-20">Michelin</h2>
+      <h2 class="text-xl font-bold m-0 z-20">Nike</h2>
       <h2>Machine Vision</h2>
       <a href="https://sive.rs/nowff" target="_blank">
       </a>
