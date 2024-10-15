@@ -1,16 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card/index.astro";
-import IntroCard from "../components/IntroCard.astro";
-import ContactsCard from "../components/ContactsCard.astro";
-import TimeZone from "../components/TimeZoneCard.astro";
-import AboutMe from "../components/AboutMe.astro";
 import Now from "../components/Now.astro";
-import Globe from "../components/Globe";
-import Education from "../components/Education.astro";
-import Resume from "../components/Resume.astro";
-import Skills from "../components/Skills.astro";
-import RecentProjects from "../components/RecentProjects.astro";
 import Michelin from "../components/Projects/Michelin.astro";
 import Zimmer from "../components/Projects/Zimmer.astro";
 import SEC from "../components/Projects/SEC.astro";
@@ -61,8 +52,8 @@ import Nike from "../components/Projects/Nike.astro";
 </script>
 
 <script>
-  const MIN_SPEED = 1.0
-const MAX_SPEED = 1.0
+  const MIN_SPEED = 0.5
+const MAX_SPEED = 0.5
 
 function randomNumber(min, max) {
   return Math.random() * (max - min) + min
