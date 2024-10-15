@@ -1,13 +1,25 @@
 ---
 import ProjectCard from "../ProjectCard/index.astro";
 import img from '../../lib/austinfc.webp';
+import skillicon1 from '../../lib/icons/Python-Light.svg';
+import skillicon2 from '../../lib/icons/SQL.png';
+import skillicon3 from '../../lib/icons/HTML.svg';
+import skillicon4 from '../../lib/icons/CSS.svg';
+import skillicon5 from '../../lib/icons/VBA.webp';
+import skillicon6 from '../../lib/icons/JavaScript.svg';
 
 const image = [
   { img: img },
+  { skillicon1: skillicon1 },
+  { skillicon2: skillicon2 },
+  { skillicon3: skillicon3 },
+  { skillicon4: skillicon4 },
+  { skillicon5: skillicon5 },
+  { skillicon4: skillicon6 },
 ]
 ---
 
-<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0].img.src} backpos="bottom" opac="0.7" skillicon1="../../src/lib/icons/Python-Light.svg" skillicon2="../../src/lib/icons/SQL.png" skillicon3="../../src/lib/icons/HTML.svg" skillicon4="../../src/lib/icons/CSS.svg" skillicon5="../../src/lib/icons/VBA.webp" skillicon6="../../src/lib/icons/JavaScript.svg" desc='"Built a data pipeline, creating a database & frontend app to gather player & match stats in real time"'>
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="bottom" opac="0.7" skillicon1={image[1]?.skillicon1?.src} skillicon2={image[2]?.skillicon2?.src} skillicon3={image[3]?.skillicon3?.src} skillicon4={image[4]?.skillicon4?.src} skillicon5={image[5]?.skillicon5?.src} skillicon6={image[6]?.skillicon6?.src} desc='"Built a data pipeline, creating a database & frontend app to gather player & match stats in real time"'>
   <div class="flex justify-between w-full items-start mb-2">
     <div class="flex flex-col">
       <h2 class="text-xl font-bold m-0 z-20">Austin FC</h2>

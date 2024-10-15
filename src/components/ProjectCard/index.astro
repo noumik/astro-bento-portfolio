@@ -2,6 +2,42 @@
 import { Icon } from "astro-icon/components";
 import Content from "./Content.astro";
 
+import python from '../../lib/icons/Python-Light.svg'
+import rlang from '../../lib/icons/R-Dark.svg';
+import sql from '../../lib/icons/SQL.png';
+import java from '../../lib/icons/Java-Light.svg';
+import vba from '../../lib/icons/VBA.webp';
+import html from '../../lib/icons/HTML.svg';
+import css from '../../lib/icons/CSS.svg';
+import js from '../../lib/icons/JavaScript.svg';
+import csharp from '../../lib/icons/C-Sharp.png';
+import php from '../../lib/icons/PHP-Light.svg';
+import qgis from '../../lib/icons/QGIS.png';
+import tableau from '../../lib/icons/Tableau.svg';
+import sas from '../../lib/icons/SAS.webp';
+import git from '../../lib/icons/Git.png';
+import azure from '../../lib/icons/Azure.png';
+
+const image = [
+  { python: python },
+  { rlang: rlang },
+  { sql: sql },
+  { java: java },
+  { vba: vba },
+  { html: html },
+  { css: css },
+  { js: js },
+  { csharp: csharp },
+  { php: php },
+  { qgis: qgis },
+  { tableau: tableau },
+  { sas: sas },
+  { git: git },
+  { azure: azure },
+]
+//import all the images here and then pass the name of the skill images from the project cards
+
+
 interface Props {
   title?: string;
   body?: string;
@@ -97,7 +133,7 @@ const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic
   }
 
   .skillicon1 {
-    content: url("../../src/lib/icons/Python-Light.svg");
+    content: var(--skillicon1);
     z-index:10;
     position:absolute;
     height:20%;
