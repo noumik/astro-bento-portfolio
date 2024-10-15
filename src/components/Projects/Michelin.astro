@@ -1,9 +1,13 @@
 ---
 import ProjectCard from "../ProjectCard/index.astro";
 import img from '../../lib/michelin.webp';
+import skillicon1 from '../../lib/icons/Python-Light.svg';
+import skillicon2 from '../../lib/icons/Git.png';
 
 const image = [
   { img: img },
+  { skillicon1: skillicon1 },
+  { skillicon2: skillicon2 },
 ]
 ---
 
@@ -14,7 +18,7 @@ const image = [
 }*/
 </style>
 
-<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0].img.src} backpos="center" opac="0.7" skillicon1="../../src/lib/icons/Python-Light.svg" skillicon2="../../src/lib/icons/Git.png" desc='"Developed and implemented an adaptive control system to reduce material waste from tires"'>
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="center" opac="0.7" skillicon1={image[1]?.skillicon1?.src} skillicon2={image[2]?.skillicon2?.src} desc='"Developed and implemented an adaptive control system to reduce material waste from tires"'>
   <div class="flex justify-between w-full items-start mb-2">
     <div class="flex flex-col">
       <h2 class="text-xl font-bold m-0 z-20">Michelin</h2>

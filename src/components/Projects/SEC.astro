@@ -1,13 +1,19 @@
 ---
 import ProjectCard from "../ProjectCard/index.astro";
 import img from '../../lib/sec.jpg';
+import skillicon1 from '../../lib/icons/Python-Light.svg';
+import skillicon2 from '../../lib/icons/R-Dark.svg';
+import skillicon3 from '../../lib/icons/SQL.png';
 
 const image = [
   { img: img },
+  { skillicon1: skillicon1 },
+  { skillicon2: skillicon2 },
+  { skillicon3: skillicon3 },
 ]
 ---
 
-<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0].img.src} backpos="center" opac="0.7" skillicon1="../../src/lib/icons/Python-Light.svg" skillicon2="../../src/lib/icons/R-Dark.svg" skillicon3="../../src/lib/icons/SQL.png" skillicon4="" desc='"Produced forensic data analyses used as evidence in the SEC’s lawsuit against a credit ratings firm"'>
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="center" opac="0.7" skillicon1={image[1]?.skillicon1?.src} skillicon2={image[2]?.skillicon2?.src} skillicon3={image[3]?.skillicon3?.src} desc='"Produced forensic data analyses used as evidence in the SEC’s lawsuit against a credit ratings firm"'>
   <div class="flex justify-between w-full items-start mb-2">
     <div class="flex flex-col">
       <h2 class="text-xl font-bold m-0 z-20">U.S. Securities and Exchange Commission</h2>
