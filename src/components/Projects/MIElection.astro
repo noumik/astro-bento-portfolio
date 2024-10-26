@@ -1,0 +1,19 @@
+---
+import ProjectCard from "../ProjectCard/index.astro";
+import img from '../../lib/mielection.png';
+
+const image = [
+  { img: img },
+]
+---
+
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="center" opac="0.7" desc='"Analyzed election results from 2018 Michigan State House, State Senate, and Gubernatorial races"'>
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold m-0 z-20">Michigan Legislative Elections Analysis</h2>
+      <h2></h2>
+      <a href="https://sive.rs/nowff" target="_blank">
+      </a>
+    </div>
+  </div>
+</ProjectCard>

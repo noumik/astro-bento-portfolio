@@ -1,0 +1,23 @@
+---
+import ProjectCard from "../ProjectCard/index.astro";
+import img from '../../lib/airbnb.jpg';
+import skillicon1 from '../../lib/icons/Python-Light.svg';
+import skillicon2 from '../../lib/icons/SAS.webp';
+
+const image = [
+  { img: img },
+  { skillicon1: skillicon1 },
+  { skillicon2: skillicon2 },
+]
+---
+
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="center" opac="0.7" skillicon1={image[1]?.skillicon1?.src} skillicon2={image[2]?.skillicon2?.src} desc='"Analyzed how to expand Airbnb&apos;s market share in the Washington D.C. area"'>
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold m-0 z-20">Airbnb</h2>
+      <h2>Data Analysis Project</h2>
+      <a href="https://sive.rs/nowff" target="_blank">
+      </a>
+    </div>
+  </div>
+</ProjectCard>

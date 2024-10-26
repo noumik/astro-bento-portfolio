@@ -1,0 +1,29 @@
+---
+import ProjectCard from "../ProjectCard/index.astro";
+import img from '../../lib/voters.jpg';
+import skillicon1 from '../../lib/icons/Python-Light.svg';
+//import skillicon4 from '../../lib/icons/CSS.svg';
+//import skillicon5 from '../../lib/icons/VBA.webp';
+//import skillicon6 from '../../lib/icons/JavaScript.svg';
+
+const image = [
+  { img: img },
+  { skillicon1: skillicon1 },
+  //{ skillicon2: skillicon2 },
+  //{ skillicon3: skillicon3 },
+  //{ skillicon4: skillicon4 },
+  //{ skillicon5: skillicon5 },
+  //{ skillicon6: skillicon6 },
+]
+---
+
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="top" opac="0.7" skillicon1={image[1]?.skillicon1?.src} desc='"Analyzed election data and created a neural network model to predict how Americans will vote"'>
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold m-0 z-20">Analyzing Voters</h2>
+      <h2>Machine Learning</h2>
+      <a href="https://sive.rs/nowff" target="_blank">
+      </a>
+    </div>
+  </div>
+</ProjectCard>

@@ -8,6 +8,13 @@ import SEC from "../components/Projects/SEC.astro";
 import AustinFC from "../components/Projects/AustinFC.astro";
 import DOJ from "../components/Projects/DOJ.astro";
 import Nike from "../components/Projects/Nike.astro";
+import AustinFCSociogram from "../components/Projects/AustinFCSociogram.astro";
+import ETFReturns from "../components/Projects/ETFReturns.astro";
+import ProgAndMed from "../components/Projects/ProgAndMed.astro";
+import AnalyzingVoters from "../components/Projects/AnalyzingVoters.astro";
+import DLCC from "../components/Projects/DLCC.astro";
+import Airbnb from "../components/Projects/Airbnb.astro";
+import MIElection from "../components/Projects/MIElection.astro";
 
 ---
 
@@ -24,7 +31,7 @@ import Nike from "../components/Projects/Nike.astro";
       {
         at: "-0.1",
         duration: 0.4,
-        delay: stagger(0.3),
+        delay: stagger(0.05),
         easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
       },
     ],
@@ -347,9 +354,9 @@ body {
   <main
     class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-8 lg:grid-cols-4 lg:gap-4 lg:max-h-[800px]"
   >
-  <Card colSpan="md:col-span-4" rowSpan="md:row-span-1">
+  <!--<Card colSpan="md:col-span-4" rowSpan="md:row-span-1">
       <h1 class="text-xl font-bold text-center">Projects</h1>
-  </Card>
+  </Card> -->
     <Now />
     <Michelin />
     <Zimmer />
@@ -357,6 +364,13 @@ body {
     <AustinFC />
     <DOJ />
     <Nike />
+    <AustinFCSociogram />
+    <ETFReturns />
+    <ProgAndMed />
+    <AnalyzingVoters />
+    <DLCC />
+    <Airbnb />
+    <MIElection />
     </Card>
     <a href="/">
     <div class="arrow-container">

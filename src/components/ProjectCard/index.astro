@@ -35,8 +35,6 @@ const image = [
   { git: git },
   { azure: azure },
 ]
-//import all the images here and then pass the name of the skill images from the project cards
-
 
 interface Props {
   title?: string;
@@ -214,6 +212,7 @@ const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic
 <img class="skillicon5">
 <img class="skillicon6">
 
+<!--
 <div class="overlay text-base font-semibold text-center"></div>
   {
     href ? (
@@ -222,6 +221,24 @@ const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic
           name="ri:arrow-right-up-line"
           class="h-6 float-right group-hover:text-primary-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ease-in-out duration-100 z-20"
         />
+        <Content title={title} body={body}>
+          <slot />
+        </Content>
+      </a>
+    ) : (
+      <Content title={title} body={body}>
+        <slot />
+      </Content>
+    )
+  }
+</div>
+-->
+
+
+<div class="overlay text-base font-semibold text-center"></div>
+  {
+    href ? (
+      <a href={href} target="_blank">
         <Content title={title} body={body}>
           <slot />
         </Content>
