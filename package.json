@@ -32,6 +32,8 @@
   },
   "devDependencies": {
     "@types/d3": "^7.4.3",
+    "@types/jquery": "^3.5.32",
+    "@types/react": "^18.3.12",
     "@unocss/astro": "^0.61.3",
     "@unocss/postcss": "^0.61.3",
     "@unocss/preset-uno": "^0.61.3",
