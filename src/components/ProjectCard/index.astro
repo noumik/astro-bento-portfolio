@@ -196,6 +196,17 @@ const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic
     transition: opacity 0.2s ease; /* Transition for opacity */
   }
 
+  .test-div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer; /* Change cursor to pointer */
+  }
+
 </style>
 <!--
 <div
@@ -271,16 +282,65 @@ const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic
   }
 </div>
 -->
+
 <!--
 <script>
-  const href = Astro.props.href; // Get the href from props
-  const div = document.querySelector('.card'); // Ensure this matches your div selector
-  
-  if (div && href) {
+  document.addEventListener('DOMContentLoaded', () => {
+  const div = document.querySelector('.card');
+  console.log('Div found:', div); // Check if the div is found
+
+  if (div) {
+    const href = Astro.props.href; // Get href
+    console.log('Href:', href); // Check the href value
+
     div.addEventListener('click', () => {
       console.log('Div clicked!');
-      window.location.href = href;
+      if (href) {
+        window.location.href = href;
+      }
     });
+  } else {
+    console.error('Div not found');
   }
+});
+
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const href = Astro.props.href;
+    const div = document.querySelector('.card');
+
+    if (div) {
+      console.log('Div found:', div); // Confirm the div is selected
+
+      div.addEventListener('click', (event) => {
+        console.log('Div clicked!');
+        if (href) {
+          window.location.href = href;
+        } else {
+          console.warn('No href provided');
+        }
+      });
+    } else {
+      console.error('Div not found');
+    }
+  });
 </script>
  -->
+<div class="test-div" style="width: 200px; height: 200px; background-color: red;">
+  Click me
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const testDiv = document.querySelector('.test-div');
+    console.log('Test Div found:', testDiv);
+
+    if (testDiv) {
+      testDiv.addEventListener('click', () => {
+        console.log('Test Div clicked!');
+      });
+    }
+  });
+</script>
