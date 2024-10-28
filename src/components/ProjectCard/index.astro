@@ -257,6 +257,7 @@ const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic
 </div>
 -->
 
+<!--
 <div class="overlay text-base font-semibold text-center"></div>
   {
     <Content title={title} body={body}>
@@ -264,8 +265,8 @@ const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic
     </Content>
   }
 </div>
+-->
 
-<!--
 <div class="overlay text-base font-semibold text-center"></div>
   {
     href ? (
@@ -281,7 +282,7 @@ const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic
     )
   }
 </div>
--->
+
 
 <!--
 <script>
@@ -305,42 +306,4 @@ const { title, body, colSpan, rowSpan, href, colorText, height, img, opac, cubic
 });
 
 </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const href = Astro.props.href;
-    const div = document.querySelector('.card');
-
-    if (div) {
-      console.log('Div found:', div); // Confirm the div is selected
-
-      div.addEventListener('click', (event) => {
-        console.log('Div clicked!');
-        if (href) {
-          window.location.href = href;
-        } else {
-          console.warn('No href provided');
-        }
-      });
-    } else {
-      console.error('Div not found');
-    }
-  });
-</script>
- -->
-<div class="test-div" style="width: 200px; height: 200px; background-color: red;">
-  Click me
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const testDiv = document.querySelector('.test-div');
-    console.log('Test Div found:', testDiv);
-
-    if (testDiv) {
-      testDiv.addEventListener('click', () => {
-        console.log('Test Div clicked!');
-      });
-    }
-  });
-</script>
+-->
