@@ -1,9 +1,9 @@
 ---
 import ProjectCard from "./ProjectCard/index.astro";
 import Pulse from "./Pulse.astro";
-import img from '../../src/lib/bbu.png';
-import skillicon1 from '../lib/icons/oraclewms.png';
-import skillicon2 from '../lib/icons/Python-Light.svg';
+import img from '../../src/lib/michelin.webp';
+import skillicon1 from '../lib/icons/Python-Light.svg';
+import skillicon2 from '../lib/icons/Git.png';
 
 const image = [
   { img: img },
@@ -12,17 +12,15 @@ const image = [
 ]
 ---
 
-<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src}, opac="0.7" backpos="center" skillicon1={image[1]?.skillicon1?.src} skillicon2={image[2]?.skillicon2?.src} desc='"Implementing & leading training on Oracle WMS. Developing a resource optimization program"'>
-
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="center" opac="0.7" skillicon1={image[1]?.skillicon1?.src} skillicon2={image[2]?.skillicon2?.src} desc='"Developed and implemented an adaptive control system to reduce material waste from tires"'>
   <div class="flex justify-between w-full items-start mb-2">
     <div class="flex flex-col">
-      <h2 class="text-xl font-bold m-0 z-20">Current Project</h2>
-      <h2>Bimbo Bakeries Oracle WMS</h2>
+      <h2 class="text-xl font-bold m-0 z-20">Michelin</h2>
+      <h2>Machine Vision</h2>
+      <!--<img src="../../src/lib/icons/Python-Light.svg" class="skillicon">-->
       <a href="https://sive.rs/nowff" target="_blank">
-        <!--<span class="text-xs text-gray-500 cursor-pointer">what's that ?</span> -->
       </a>
     </div>
     <Pulse />
   </div>
-  <p class="text-xs"></p>
 </ProjectCard>

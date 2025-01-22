@@ -1,0 +1,21 @@
+---
+import ProjectCard from "../ProjectCard/index.astro";
+import img from '../../lib/bikeshare.webp';
+import skillicon1 from '../../lib/icons/Python-Light.svg';
+
+const image = [
+  { img: img },
+  { skillicon1: skillicon1 },
+]
+---
+
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="center" opac="0.6" skillicon1={image[1]?.skillicon1?.src} desc='"Developed models to optimize bike distribution, docking station placement, and rebalancing"'>
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold m-0 z-20">Bike-Share Optimizer</h2>
+      <h2>Predictive Modeling & Logistics</h2>
+      <a href="https://sive.rs/nowff" target="_blank">
+      </a>
+    </div>
+  </div>
+</ProjectCard>

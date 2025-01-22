@@ -1,0 +1,31 @@
+---
+import ProjectCard from "../ProjectCard/index.astro";
+import img from '../../lib/propertytax.jpg';
+import skillicon1 from '../../lib/icons/Python-Light.svg';
+import skillicon2 from '../../lib/icons/Flask.png';
+import skillicon3 from '../../lib/icons/Git.png';
+import skillicon4 from '../../lib/icons/HTML.svg';
+import skillicon5 from '../../lib/icons/JavaScript.svg';
+import skillicon6 from '../../lib/icons/CSS.svg';
+
+const image = [
+  { img: img },
+  { skillicon1: skillicon1 },
+  { skillicon2: skillicon2 },
+  { skillicon3: skillicon3 },
+  { skillicon4: skillicon4 },
+  { skillicon5: skillicon5 },
+  { skillicon6: skillicon6 },
+]
+---
+
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="center" opac="0.5" skillicon1={image[1]?.skillicon1?.src} skillicon2={image[2]?.skillicon2?.src} skillicon3={image[3]?.skillicon3?.src} skillicon4={image[4]?.skillicon4?.src} skillicon5={image[5]?.skillicon5?.src} skillicon6={image[6]?.skillicon6?.src} desc='"Built a Flask app to help homeowners protest property taxes with comparables, estimates, and interactive visualizations"'>
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold m-0 z-20">Property Tax Fighter</h2>
+      <h2>Machine Learning & Data Viz</h2>
+      <a href="https://sive.rs/nowff" target="_blank">
+      </a>
+    </div>
+  </div>
+</ProjectCard>
