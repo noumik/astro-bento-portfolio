@@ -8,11 +8,12 @@ type Props = MarkdownLayoutProps<{
   description: string;
   pubDate: string;
   minutesRead: string;
+  headerImage: string;
 }>;
 
 const { slug } = Astro.params;
 const { frontmatter } = Astro.props;
-const headerImage = frontmatter.headerImage;
+//const headerImage = frontmatter.headerImage;
 
 ---
 
@@ -39,10 +40,10 @@ const headerImage = frontmatter.headerImage;
     </a>
 
     <!-- Header Image and Title Overlay -->
-    {headerImage && (
+    {
       <div class="relative mt-12">
         <img
-          src={headerImage}
+          src={frontmatter.headerImage}
           alt="Header Image"
           class="w-full h-72 object-cover rounded-lg"
           transition:name="project-image"
@@ -51,7 +52,7 @@ const headerImage = frontmatter.headerImage;
           {frontmatter.title}
         </h1>
       </div>
-    )}
+    }
 
     <!-- Post Title and Meta Info (optional) -->
     <div>
