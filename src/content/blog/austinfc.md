@@ -22,5 +22,4 @@ _The materials for this project are confidential. Below is a brief summary of th
 **Result:** The new system simplified data management processes, enabling more efficient analysis and the generation of actionable insights through visualizations, ultimately improving decision-making for the club.
 <br><br><br>
 <img src="../../src/lib/austinfcgraphs.png">
-![Another local image](/src/lib/austinfcgraphs.png)
 <br><br>
