@@ -14,8 +14,6 @@ const { slug } = Astro.params;
 const { frontmatter } = Astro.props;
 const headerImage = frontmatter.headerImage;
 
-// Resolve the header image path dynamically based on the `import.meta.env.SITE` variable
-const resolvedHeaderImage = new URL(headerImage, import.meta.env.SITE).href;
 ---
 
 <style>

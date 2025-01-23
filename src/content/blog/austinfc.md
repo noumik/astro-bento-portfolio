@@ -4,7 +4,7 @@ title: "Austin FC"
 description: "Austin FC"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "../../src/lib/austinfc.webp"
+headerImage: "../lib/austinfc.webp"
 ---
 
 # Forensic Data Analysis
