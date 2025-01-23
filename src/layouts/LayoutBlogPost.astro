@@ -12,9 +12,16 @@ type Props = MarkdownLayoutProps<{
 
 const { slug } = Astro.params;
 const { frontmatter } = Astro.props;
+const headerImage = frontmatter.headerImage;
 ---
 
-<BasicLayout
+<style>
+  @view-transition {
+    navigation: auto; /* enabled! */
+  }
+</style>
+
+<BasicLayout transition:animate="slide"
   frontmatter={frontmatter}
   slug={slug}
   page="blog"
@@ -22,18 +29,38 @@ const { frontmatter } = Astro.props;
   description={frontmatter.description}
 >
   <main class="mx-auto max-w-3xl w-full h-screen p-8 text-neutral-100">
+    <!-- Back Button -->
     <a
-      href="/blog"
+      href="javascript:window.history.back();"
       class="text-white bg-neutral-900 hover:bg-neutral-800 px-4 py-2 border-1 border-solid border-neutral-600 rounded-lg mb-8"
-      >Back</a
     >
-    <div class="my-10">
-      <h1 class="text-5xl font-semibold">{frontmatter.title}</h1>
+      Back
+    </a>
+
+    <!-- Header Image and Title Overlay -->
+    {headerImage && (
+      <div class="relative mt-12">
+        <img
+          src={headerImage}
+          alt="Header Image"
+          class="w-full h-72 object-cover rounded-lg"
+          transition:name="project-image"
+        />
+        <h1 class="absolute bottom-8 left-8 text-5xl font-semibold text-white bg-black bg-opacity-50 p-4 rounded-lg">
+          {frontmatter.title}
+        </h1>
+      </div>
+    )}
+
+    <!-- Post Title and Meta Info (optional) -->
+    <div>
       <div class="flex justify-between pt-4 text-gray-500 text-sm">
-        <p>{formatDate(new Date(frontmatter.pubDate))}</p>
-        <p>{frontmatter.minutesRead}</p>
+        <!--<p>{formatDate(new Date(frontmatter.pubDate))}</p> -->
+        <!--<p>{frontmatter.minutesRead}</p> -->
       </div>
     </div>
+
+    <!-- Blog Content -->
     <article class="prose prose-p:text-red-500 prose-slate prose-invert">
       <slot />
     </article>

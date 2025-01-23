@@ -11,6 +11,12 @@ interface Props {
 const { title, description, page, fullScreen } = Astro.props;
 ---
 
+<style>
+  @view-transition {
+    navigation: auto; /* enabled! */
+  }
+</style>
+
 <BasicLayout title={title} description={description}>
   <div
     slot="loader"
