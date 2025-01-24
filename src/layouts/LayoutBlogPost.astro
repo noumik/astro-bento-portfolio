@@ -2,8 +2,10 @@
 import { formatDate } from "../lib/helpers";
 import type { MarkdownLayoutProps } from "astro";
 import BasicLayout from "./BasicLayout.astro";
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 
-type Props = MarkdownLayoutProps<{
+type LayoutProps = MarkdownLayoutProps<{
   title: string;
   description: string;
   pubDate: string;
@@ -13,7 +15,39 @@ type Props = MarkdownLayoutProps<{
 
 const { slug } = Astro.params;
 const { frontmatter } = Astro.props;
-//const headerImage = frontmatter.headerImage;
+const { headerImage } = frontmatter;
+/*
+import { Image } from 'astro:assets';
+import headerImg from '../../src/lib/austinfc.webp';
+*/
+/*
+interface ImageProps {
+   imagePath: string;
+   altText: string;
+   name: string;
+   age: number;
+}
+*/
+//const { imagePath, altText, name, age } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/lib/*.{jpeg,jpg,png,gif,webp}')
+//console.log("headerImage from frontmatter:", headerImage);
+//console.log("Available image paths:", Object.keys(images));
+//const image = images[headerImage];
+
+const imageResolve = images[headerImage];
+if (!imageResolve) {
+  console.error(`Error: Image not found for path "${headerImage}"`);
+  throw new Error(`"${headerImage}" does not exist in glob: "src/*.{jpeg,jpg,png,gif}"`);
+}
+
+// Since the image resolve function returns a Promise, we need to await it
+const image = await imageResolve();
+
+// Log the resolved image to verify
+console.log("Resolved image:", image);
+
+//if (!image) throw new Error(`"${headerImage}" does not exist in glob: "/src/lib/*.{jpeg,jpg,png,gif,webp}"`);
+//if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/*.{jpeg,jpg,png,gif}"`);
 
 ---
 
@@ -40,20 +74,13 @@ const { frontmatter } = Astro.props;
     </a>
 
     <!-- Header Image and Title Overlay -->
-    {
-      <div class="relative mt-12">
-        <img
-          src={frontmatter.headerImage}
-          alt="Header Image"
-          class="w-full h-72 object-cover rounded-lg"
-          transition:name="project-image"
-        />
-        <h1 class="absolute bottom-8 left-8 text-5xl font-semibold text-white bg-black bg-opacity-50 p-4 rounded-lg">
-          {frontmatter.title}
-        </h1>
-      </div>
-    }
-
+    <div class="relative mt-12">
+      <Image src={image.default} alt="" transition:name="project-image" class="w-full h-72 object-cover rounded-lg"/>
+      <h1 class="absolute bottom-8 left-8 text-5xl font-semibold text-white bg-black bg-opacity-50 p-4 rounded-lg">
+        {frontmatter.title}
+      </h1>
+    </div>
+    
     <!-- Post Title and Meta Info (optional) -->
     <div>
       <div class="flex justify-between pt-4 text-gray-500 text-sm">
