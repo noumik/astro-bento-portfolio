@@ -5,6 +5,7 @@ description: "Austin FC"
 pubDate: 2023-01-21
 category: "intro"
 headerImage: "/src/lib/austinfc.webp"
+
 ---
 
 # Forensic Data Analysis
@@ -21,5 +22,6 @@ _The materials for this project are confidential. Below is a brief summary of th
 <br><br>
 **Result:** The new system simplified data management processes, enabling more efficient analysis and the generation of actionable insights through visualizations, ultimately improving decision-making for the club.
 <br><br><br>
-<img src="../../src/lib/austinfcgraphs.png">
+<!--<img src="../../src/lib/austinfcgraphs.png">-->
+![Austin FC Graphs](/src/lib/austinfcgraphs.png)
 <br><br>

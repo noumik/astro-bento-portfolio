@@ -16,23 +16,8 @@ type LayoutProps = MarkdownLayoutProps<{
 const { slug } = Astro.params;
 const { frontmatter } = Astro.props;
 const { headerImage } = frontmatter;
-/*
-import { Image } from 'astro:assets';
-import headerImg from '../../src/lib/austinfc.webp';
-*/
-/*
-interface ImageProps {
-   imagePath: string;
-   altText: string;
-   name: string;
-   age: number;
-}
-*/
-//const { imagePath, altText, name, age } = Astro.props;
+
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/lib/*.{jpeg,jpg,png,gif,webp}')
-//console.log("headerImage from frontmatter:", headerImage);
-//console.log("Available image paths:", Object.keys(images));
-//const image = images[headerImage];
 
 const imageResolve = images[headerImage];
 if (!imageResolve) {
@@ -42,12 +27,6 @@ if (!imageResolve) {
 
 // Since the image resolve function returns a Promise, we need to await it
 const image = await imageResolve();
-
-// Log the resolved image to verify
-console.log("Resolved image:", image);
-
-//if (!image) throw new Error(`"${headerImage}" does not exist in glob: "/src/lib/*.{jpeg,jpg,png,gif,webp}"`);
-//if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/*.{jpeg,jpg,png,gif}"`);
 
 ---
 
