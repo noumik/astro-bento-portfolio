@@ -4,7 +4,7 @@ title: "Zimmer Biomet"
 description: "Zimmer Biomet"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "../../src/lib/zimmer.webp"
+headerImage: "/src/lib/zimmer.webp"
 ---
 
 # Product Lifecycle Management — Oracle WMS

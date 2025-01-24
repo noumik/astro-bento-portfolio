@@ -4,7 +4,7 @@ title: "Employee Attrition Predictor"
 description: "Employee Attrition Predictor"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "../../src/lib/employeeattrition.png"
+headerImage: "/src/lib/employeeattrition.png"
 ---
 
 # Predictive Modeling & Logistics

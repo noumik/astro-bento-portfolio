@@ -4,7 +4,7 @@ title: "Bimbo Bakeries"
 description: "Bimbo Bakeries"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "../../src/lib/bbu.png"
+headerImage: "/src/lib/bbu.png"
 ---
 
 # Predictive Modeling & Logistics

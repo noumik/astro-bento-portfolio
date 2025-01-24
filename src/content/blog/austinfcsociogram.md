@@ -4,7 +4,7 @@ title: "Austin FC"
 description: "Austin FC"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "../../src/lib/austinfcsoc.jpg"
+headerImage: "/src/lib/austinfcsoc.jpg"
 ---
 
 # Sociogram Project

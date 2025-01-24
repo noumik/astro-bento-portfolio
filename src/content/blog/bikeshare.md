@@ -4,7 +4,7 @@ title: "Bike-Share Optimizer"
 description: "Bike-Share Optimizer"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "../../src/lib/bikeshare.webp"
+headerImage: "/src/lib/bikeshare.webp"
 ---
 
 # Predictive Modeling & Logistics

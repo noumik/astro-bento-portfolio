@@ -4,7 +4,7 @@ title: "U.S. Department of Justice"
 description: "U.S. Department of Justice"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "../../src/lib/doj.jpg"
+headerImage: "/src/lib/doj.jpg"
 ---
 
 # Forensic Data Analysis

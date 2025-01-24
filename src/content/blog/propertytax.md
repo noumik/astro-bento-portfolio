@@ -4,7 +4,7 @@ title: "Property Tax Fighter"
 description: "Property Tax Fighter"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "../../src/lib/propertytax.jpg"
+headerImage: "/src/lib/propertytax.jpg"
 ---
 
 # Data Visualization & Machine Learning

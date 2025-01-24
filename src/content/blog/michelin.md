@@ -4,7 +4,7 @@ title: "Michelin"
 description: "Michelin"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "../../src/lib/michelin.webp"
+headerImage: "/src/lib/michelin.webp"
 ---
 
 # Machine Vision

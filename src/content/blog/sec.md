@@ -4,7 +4,7 @@ title: "U.S. Securities and Exchange Commission"
 description: "U.S. Securities and Exchange Commission"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "../../src/lib/sec.jpg"
+headerImage: "/src/lib/sec.jpg"
 ---
 
 # Forensic Data Analysis
