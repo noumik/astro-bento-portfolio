@@ -7,7 +7,7 @@ category: "intro"
 headerImage: "/src/lib/austinfc.webp"
 ---
 
-# Forensic Data Analysis
+# Data Visualization and Analytics
 
 _The materials for this project are confidential. Below is a brief summary of the work._
 <br>_Screenshots of the web app will be posted with permission from the client at a later time._
