@@ -4,7 +4,7 @@ title: "Ford"
 description: "Ford"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "/src/lib/ford.png"
+headerImage: "/src/lib/ford.jpg"
 ---
 
 # Machine Vision
