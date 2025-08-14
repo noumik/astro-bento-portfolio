@@ -7,16 +7,16 @@ category: "intro"
 headerImage: "/src/lib/ford.jpg"
 ---
 
-# Machine Vision
+# Prescriptive Analytics
 
-_The technical materials for this project are confidential. Below is a brief summary of the work._
+_This project is ongoing. The technical materials for this project are confidential._
 <br><br>
 
-**Background:** When a tire gets manufactured, a [<a href="https://www.youtube.com/watch?v=pYzz2MaZo6A" style="color: lightblue;" target="_blank">Tire Building Machine</a>](https://www.youtube.com/watch?v=pYzz2MaZo6A) (TBM) cuts a long piece of rubber, with each piece intended for a single tire. However, various factors and external abnormalities that can cause the TBM to make cuts slightly too early or late, resulting in defective tires and material waste.
+**Background:** Panel gap and flush defects are a significant contributor to rework in Ford’s manufacturing process, leading to increased cost and reduced efficiency. Inconsistent measurements and delayed detection make it challenging to maintain quality at scale.
 <br><br>
-**Aim:** The goal of our team was to develop and implement an adaptive control system to  significantly reduced material waste caused by inaccurate cuts.
+**Aim:** The goal is to reduce defect-related rework through the development of a prescriptive machine learning model that accurately predicts panel gap issues and improves measurement precision.
 <br><br>
-**Action:** We developed a program that automatically detects and predicts when the TBM cutter was making inaccurate cuts, and then automatically adjusts the machine accordingly in real-time to correct the issue. The analysis was performed using Python and the program was deployed through ThingWorx for implementation.
+**Action:** We are developing a machine learning solution that analyzes real-time measurement data to detect patterns, raise alerts when gaps are consistently out of spec, and identify root causes. Dashboards are being created to help engineers monitor trends and receive prescriptive recommendations – not only on what adjustment to make, but also on which specific machine in the production line should be adjusted to correct the issue.
 <br><br>
-**Result:** At the plants where this system was implemented, a substantial reduction in rubber waste was achieved, contributing to improved efficiency and reduced material costs.
+**Result:** This system will enable proactive quality control, reduce measurement errors, and empower engineers to take targeted corrective actions, cutting rework and improving manufacturing efficiency.
 

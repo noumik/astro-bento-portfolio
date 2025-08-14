@@ -4,19 +4,19 @@ title: "Fonterra"
 description: "Fonterra"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "/src/lib/fonterra.png"
+headerImage: "/src/lib/fonterra.jpeg"
 ---
 
-# Machine Vision
+# Predictive Maintenance
 
 _The technical materials for this project are confidential. Below is a brief summary of the work._
 <br><br>
 
-**Background:** When a tire gets manufactured, a [<a href="https://www.youtube.com/watch?v=pYzz2MaZo6A" style="color: lightblue;" target="_blank">Tire Building Machine</a>](https://www.youtube.com/watch?v=pYzz2MaZo6A) (TBM) cuts a long piece of rubber, with each piece intended for a single tire. However, various factors and external abnormalities that can cause the TBM to make cuts slightly too early or late, resulting in defective tires and material waste.
+**Background:** Unexpected equipment failures in dairy processing plants can lead to costly downtime, production delays, and product loss. Fonterra, a global dairy company, needed a proactive solution to better manage equipment health across its factories.
 <br><br>
-**Aim:** The goal of our team was to develop and implement an adaptive control system to  significantly reduced material waste caused by inaccurate cuts.
+**Aim:** The objective was to develop a highly accurate predictive model that could identify potential equipment failures a month before they occur, minimizing unplanned downtime and maintenance costs.
 <br><br>
-**Action:** We developed a program that automatically detects and predicts when the TBM cutter was making inaccurate cuts, and then automatically adjusts the machine accordingly in real-time to correct the issue. The analysis was performed using Python and the program was deployed through ThingWorx for implementation.
+**Action:** Using Python, I built a machine learning model that analyzes operational and sensor data from factory equipment to predict failures with 99% accuracy. The model was trained and validated on historical failure patterns to ensure robustness and scalability across multiple facilities.
 <br><br>
-**Result:** At the plants where this system was implemented, a substantial reduction in rubber waste was achieved, contributing to improved efficiency and reduced material costs.
+**Result:** The predictive model enables Fonterra to take preemptive maintenance actions, significantly reducing unplanned outages and improving operational efficiency. Its 99% accuracy offers high confidence in failure detection, helping ensure consistent production and cost savings.
 
