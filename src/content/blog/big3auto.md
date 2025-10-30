@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/LayoutBlogPost.astro
-title: "Ford"
-description: "Ford"
+title: "Big 3 Automaker"
+description: "Big 3 Automaker"
 pubDate: 2023-01-21
 category: "intro"
-headerImage: "/src/lib/ford.jpg"
+headerImage: "/src/lib/big3auto.jpg"
 ---
 
 # Prescriptive Analytics

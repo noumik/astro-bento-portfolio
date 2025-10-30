@@ -1,7 +1,7 @@
 ---
 import ProjectCard from "./ProjectCard/index.astro";
 import Pulse from "./Pulse.astro";
-import img from '../../src/lib/ford.jpg';
+import img from '../../src/lib/big3auto.jpg';
 import skillicon1 from '../lib/icons/Python-Light.svg';
 import skillicon2 from '../lib/icons/SQL.png';
 import skillicon3 from '../lib/icons/Azure.png';
@@ -14,10 +14,10 @@ const image = [
 ]
 ---
 
-<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="center" opac="0.7" skillicon1={image[1]?.skillicon1?.src} skillicon2={image[2]?.skillicon2?.src} skillicon3={image[3]?.skillicon3?.src} desc='"Building a prescriptive ML model to predict panel gaps and prevent defect-related rework"' href="/blog/ford">
+<ProjectCard colSpan="md:col-span-1" rowSpan="md:row-span-2" img={image[0]?.img?.src} backpos="center" opac="0.7" skillicon1={image[1]?.skillicon1?.src} skillicon2={image[2]?.skillicon2?.src} skillicon3={image[3]?.skillicon3?.src} desc='"Building a prescriptive ML model to predict panel gaps and prevent defect-related rework"' href="/blog/big3auto">
   <div class="flex justify-between w-full items-start mb-2">
     <div class="flex flex-col text-left flex-grow">
-      <h2 class="text-xl font-bold m-0 z-20">Ford Motor Company</h2>
+      <h2 class="text-xl font-bold m-0 z-20">Big 3 Automaker</h2>
       <h2>Prescriptive Analytics</h2>
       <!--<img src="../../src/lib/icons/Python-Light.svg" class="skillicon">-->
       <a href="https://sive.rs/nowff" target="_blank">
