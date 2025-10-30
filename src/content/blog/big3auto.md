@@ -12,7 +12,7 @@ headerImage: "/src/lib/big3auto.jpg"
 _This project is ongoing. The technical materials for this project are confidential._
 <br><br>
 
-**Background:** Panel gap and flush defects are a significant contributor to rework in Ford’s manufacturing process, leading to increased cost and reduced efficiency. Inconsistent measurements and delayed detection make it challenging to maintain quality at scale.
+**Background:** Panel gap and flush defects are a significant contributor to rework in this company's manufacturing process, leading to increased cost and reduced efficiency. Inconsistent measurements and delayed detection make it challenging to maintain quality at scale.
 <br><br>
 **Aim:** The goal is to reduce defect-related rework through the development of a prescriptive machine learning model that accurately predicts panel gap issues and improves measurement precision.
 <br><br>
