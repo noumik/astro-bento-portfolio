@@ -13,6 +13,8 @@ import Fonterra from "../components/Projects/Fonterra.astro";
 import SEC from "../components/Projects/SEC.astro";
 import AustinFC from "../components/Projects/AustinFC.astro";
 import Michelin from "../components/Projects/Michelin.astro";
+import Copyright from "../components/Copyright.astro";
+import MobileBanner from "../pages/MobileBanner.astro";
 
 ---
 
@@ -168,6 +170,44 @@ import Michelin from "../components/Projects/Michelin.astro";
   filter: brightness(0) invert(1);
 }
 */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop order (default) */
+.intro { order: 1; }
+.resume { order: 2; }
+.skills { order: 3; }
+.about { order: 4; }
+.now { order: 5; }
+.property { order: 6; }
+.fonterra { order: 7; }
+.michelin { order: 8; }
+.education { order: 9; }
+.contacts { order: 10; }
+.austin { order: 11; }
+.sec { order: 12; }
+.copyright { order: 13; }
+
+/* Mobile reorder */
+@media (max-width: 768px) {
+  .intro { order: 1; }
+  .resume { order: 2; }
+  .contacts { order: 3; }
+  .education { order: 4; }
+  .about { order: 5; }
+  .skills { order: 6; }
+  .now { order: 7; }
+  .property { order: 8; }
+  .fonterra { order: 9; }
+  .michelin { order: 10; }
+  .austin { order: 11; }
+  .sec { order: 12; }
+  .copyright { order: 13; }
+}
+
 </style>
 
 
@@ -175,39 +215,23 @@ import Michelin from "../components/Projects/Michelin.astro";
   title="Noumik Thadani - Data Scientist"
   description="I'm a data scientist based in New York, NY."
 >
+
   <main
     class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-8 lg:grid-cols-4 lg:gap-4 lg:max-h-[800px]"
   >
-    <IntroCard />
-    <Resume />
-    <Skills />
-    <AboutMe />
-    <!--<TimeZone />-->
-    <!--<RecentProjects />-->
-    <Now transition:name="project-image"/>
-    <PropertyTax transition:name="project-image"/>
-    <Fonterra />
-    <Michelin />
-    <!--<Card
-      colSpan="md:col-span-1"
-      rowSpan="md:row-span-1"
-      title="Countries I visited"
-      href="travel"
-      colorText="text-neutral-900"
-    >
-      <div class="h-full w-full absolute inset-0 -z-10">
-        <Globe client:load />
-      </div>
-    </Card>-->
-    <Education />
-    <ContactsCard />
-    <AustinFC />
-    <SEC />
-    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
-      <p class="text-xs">
-        © 2025
-      </p>
-    </Card>
+    <IntroCard class="intro" />
+    <Resume class="resume" />
+    <Skills class="skills" />
+    <AboutMe class="about" />
+    <Now class="now" transition:name="project-image" />
+    <PropertyTax class="property" transition:name="project-image" />
+    <Fonterra class="fonterra" />
+    <Michelin class="michelin" />
+    <Education class="education" />
+    <ContactsCard class="contacts" />
+    <AustinFC class="austin" />
+    <SEC class="sec" />
+    <Copyright class="copyright" />
     
     <a href="projects">
     <div class="arrow-container">
