@@ -171,43 +171,6 @@ import MobileBanner from "../pages/MobileBanner.astro";
 }
 */
 
-.cards {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Desktop order (default) */
-.intro { order: 1; }
-.resume { order: 2; }
-.skills { order: 3; }
-.about { order: 4; }
-.now { order: 5; }
-.property { order: 6; }
-.fonterra { order: 7; }
-.michelin { order: 8; }
-.education { order: 9; }
-.contacts { order: 10; }
-.austin { order: 11; }
-.sec { order: 12; }
-.copyright { order: 13; }
-
-/* Mobile reorder */
-@media (max-width: 768px) {
-  .intro { order: 1; }
-  .resume { order: 2; }
-  .contacts { order: 3; }
-  .education { order: 4; }
-  .about { order: 5; }
-  .skills { order: 6; }
-  .now { order: 7; }
-  .property { order: 8; }
-  .fonterra { order: 9; }
-  .michelin { order: 10; }
-  .austin { order: 11; }
-  .sec { order: 12; }
-  .copyright { order: 13; }
-}
-
 </style>
 
 
@@ -215,23 +178,24 @@ import MobileBanner from "../pages/MobileBanner.astro";
   title="Noumik Thadani - Data Scientist"
   description="I'm a data scientist based in New York, NY."
 >
-
+  <MobileBanner />
   <main
     class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-8 lg:grid-cols-4 lg:gap-4 lg:max-h-[800px]"
   >
-    <IntroCard class="intro" />
-    <Resume class="resume" />
-    <Skills class="skills" />
-    <AboutMe class="about" />
-    <Now class="now" transition:name="project-image" />
-    <PropertyTax class="property" transition:name="project-image" />
-    <Fonterra class="fonterra" />
-    <Michelin class="michelin" />
-    <Education class="education" />
-    <ContactsCard class="contacts" />
-    <AustinFC class="austin" />
-    <SEC class="sec" />
-    <Copyright class="copyright" />
+    <IntroCard />
+    <Resume />
+    <Skills />
+    <AboutMe />
+    <!--<RecentProjects />-->
+    <Now transition:name="project-image"/>
+    <PropertyTax transition:name="project-image"/>
+    <Fonterra />
+    <Michelin />
+    <Education />
+    <ContactsCard />
+    <AustinFC />
+    <SEC />
+    <Copyright />
     
     <a href="projects">
     <div class="arrow-container">
