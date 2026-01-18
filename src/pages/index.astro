@@ -14,6 +14,7 @@ import SEC from "../components/Projects/SEC.astro";
 import AustinFC from "../components/Projects/AustinFC.astro";
 import Michelin from "../components/Projects/Michelin.astro";
 import Copyright from "../components/Copyright.astro";
+import MobileBanner from "./MobileBanner.astro";
 
 ---
 
@@ -182,6 +183,7 @@ import Copyright from "../components/Copyright.astro";
   title="Noumik Thadani - Data Scientist"
   description="I'm a data scientist based in New York, NY."
 >
+  <MobileBanner />
   <main
     class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-8 lg:grid-cols-4 lg:gap-4 lg:max-h-[800px]"
   >
@@ -194,17 +196,6 @@ import Copyright from "../components/Copyright.astro";
     <PropertyTax transition:name="project-image"/>
     <Fonterra />
     <Michelin />
-    <!--<Card
-      colSpan="md:col-span-1"
-      rowSpan="md:row-span-1"
-      title="Countries I visited"
-      href="travel"
-      colorText="text-neutral-900"
-    >
-      <div class="h-full w-full absolute inset-0 -z-10">
-        <Globe client:load />
-      </div>
-    </Card>-->
     <Education />
     <ContactsCard />
     <AustinFC />
