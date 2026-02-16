@@ -13,7 +13,7 @@ _The materials for this project are confidential. Below is a brief summary of th
 <br>_Screenshots of the web app will be posted with permission from the client at a later time._
 <br><br>
 
-**Background:** The Austin FC Youth Academy has a lot of performance data on players and matches, much of it stored in Excel spreadsheets. I reached out to the coaches to gain an understanding of how that data is collected and managed.
+**Background:** The Austin FC Academy has a lot of performance data on players and matches, much of it stored in Excel spreadsheets. I reached out to the coaches to gain an understanding of how that data is collected and managed.
 <br><br>
 **Aim:**  I proposed building a streamlined data pipeline, creating a centralized database, and developing front-end interfaces for real-time data collection during matches and for analyzing and visualizing insights.
 <br><br>
