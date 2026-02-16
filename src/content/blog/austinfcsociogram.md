@@ -24,7 +24,7 @@ The tool allows relationships among and between players and coaches to automatic
   <img src="/sociogram2.png"><br>
   <li style="color: white;">3. A matrix showing which player who chose who is created based on the inputted data.</li>
   <img src="/sociogram3.png"><br>
-  <li style="color: white;">4. A sociogram is then drawn, with nodes placed and arrows drawn based on the number of players and the players' answers.</li>
+  <li style="color: white;">4. A sociogram is then drawn, with nodes placed and arrows drawn based on the number of players and the players' responses.</li>
   <img src="/sociogram4.png">
 </ol>
 <br><br>
