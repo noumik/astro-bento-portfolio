@@ -34,7 +34,7 @@ Below are some sample analysis outputs. These analyses are fed into the dashboar
 - Top-right: dual threats (high xG/90, high xA/90)<br>
 - Bottom-right: pure finishers (high xG/90, low xA/90)<br>
 - Top-left: creators (low xG/90, high xA/90)<br>
-- Bottom-left: low involvement (both low)
+- Bottom-left: low involvement (both low)<br>
   <li style="color: white;">Player vs Staff Ratings from a Training Session:</li>
   <img src="/austinfcgraphs.png"><br>
 </ol>
