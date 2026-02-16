@@ -20,7 +20,7 @@ _The materials for this project are confidential. Below is a brief summary of th
 **Action:** Using SQL, I designed and managed the database, and built user-friendly front-end applications with HTML, CSS, and JavaScript.
 <br><br>
 **Result:** The new system simplified data management processes, enabling more efficient analysis and the generation of actionable insights through visualizations, ultimately improving decision-making for the club.
-<br><br><br>
+<br><br>
 Below are some sample analysis outputs. These analyses are fed into the dashboard to be displayed in an interactive, user-friendly manner. Names are changed here for privacy reasons.
 <ol>
   <li style="color: white;">Sample player leaderboard output:</li>
@@ -31,12 +31,12 @@ Below are some sample analysis outputs. These analyses are fed into the dashboar
   <img src="/3lastfivexg.png"><br>
   <li style="color: white;">Sample Scatter Plot showing Expected Goals and Expected Assists over 90 minutes:</li>
   <img src="/4xg_vs_xa_per90.png">
-- Top-right: dual threats (high xG/90, high xA/90)
-- Bottom-right: pure finishers (high xG/90, low xA/90)
-- Top-left: creators (low xG/90, high xA/90)
+- Top-right: dual threats (high xG/90, high xA/90)<br>
+- Bottom-right: pure finishers (high xG/90, low xA/90)<br>
+- Top-left: creators (low xG/90, high xA/90)<br>
 - Bottom-left: low involvement (both low)
+  <li style="color: white;">Player vs Staff Ratings from a Training Session:</li>
+  <img src="/austinfcgraphs.png"><br>
 </ol>
 <br><br>
-Player vs Staff Ratings from a Training Session:
-![](/austinfcgraphs.png)
-<br><br>
+
