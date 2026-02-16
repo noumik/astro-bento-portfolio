@@ -27,10 +27,10 @@ Below are some sample analysis outputs. These analyses are fed into the dashboar
   <img src="/1playerleaderboard.png"><br>
   <li style="color: white;">Sample player shot map:</li>
   <img src="/2shotmap.png"><br>
-  Example points:
+  Example points:<br>
 - Shot: ★ at (x=88, y=42), xG = 0.71 (close central 1v1)<br>
 - Shot: ● at (x=72, y=18), xG = 0.18 (tight angle)<br>
-- Shot: ○ at (x=25, y=40), xG = 0.05 (low-probability long shot)<br>
+- Shot: ○ at (x=25, y=40), xG = 0.05 (low-probability long shot)<br><br>
   <li style="color: white;">Sample Expected Goals Summary:</li>
   <img src="/3lastfivexg.png"><br>
   <li style="color: white;">Sample Scatter Plot showing Expected Goals and Expected Assists over 90 minutes:</li>
@@ -38,7 +38,7 @@ Below are some sample analysis outputs. These analyses are fed into the dashboar
 - Top-right: dual threats (high xG/90, high xA/90)<br>
 - Bottom-right: pure finishers (high xG/90, low xA/90)<br>
 - Top-left: creators (low xG/90, high xA/90)<br>
-- Bottom-left: low involvement (both low)<br>
+- Bottom-left: low involvement (both low)<br><br>
   <li style="color: white;">Player vs Staff Ratings from a Training Session:</li>
   <img src="/austinfcgraphs.png"><br>
 </ol>
