@@ -18,7 +18,7 @@ The tool allows relationships among and between players and coaches to automatic
 <br><br>
 **How it works:**
 <ol>
-  <li style="color: white;">1. The Excel-based tool fetches raw data from an online survey that asks coaches and players several questions.</li>
+  <li style="color: white;">1. The Excel-based tool fetches raw data from an online survey that asks coaches and players several questions (names changed for privacy reasons).</li>
   <img src="/sociogram1.png"><br>
   <li style="color: white;">2. The data is cleansed and converted into numerical form. The user selects a question to visualize.</li>
   <img src="/sociogram2.png"><br>
