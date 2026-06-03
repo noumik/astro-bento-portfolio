@@ -7,7 +7,7 @@ category: "intro"
 headerImage: "/src/lib/employeeattrition.png"
 ---
 
-# Predictive Modeling & Logistics
+# Machine Learning Prediction
 
 <style>
 .pdf {
@@ -27,7 +27,9 @@ headerImage: "/src/lib/employeeattrition.png"
 
 </style>
 
-**Background:** Bike sharing programs are becoming increasingly popular in cities around the world. Motivate is the largest operator of these services in many major U.S. cities, including New York, Chicago, and San Francisco. They worked with researchers from Cornell University, Uber, and Lyft to develop a system for balancing the number of bikes at each docking station and creating a scheme to crowd-source the process. My paper broke down and analyzed the situation by proposing various models to solve each part of the problem.
+**Background:** In this study, we investigated whether machine learning could be used to predict employee attrition and support organizational retention efforts. Using a synthetic employee dataset, we prepared the data through encoding, scaling, and dimensionality reduction techniques, then trained and evaluated several classification models, including Logistic Regression, KNN, Random Forest, AdaBoost, Neural Networks, and SVMs.
+<br><br>
+Our results showed that models trained on the full feature set consistently outperformed those using PCA-reduced data. AdaBoost achieved the highest accuracy, while Random Forest produced the strongest overall F1 score. Although predictive performance was moderate, the findings demonstrate that machine learning can provide valuable insights into attrition risk and help organizations improve workforce planning, retention strategies, and future data-driven decision making.
 <br><br>
 **Full Project Report:**
 <div class="pdf">
